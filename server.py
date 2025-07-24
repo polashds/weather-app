@@ -22,7 +22,7 @@ def get_weather():
 
     weather_data = get_current_weather(city)
 
-    # City is not found by API
+    # # City is not found by API
     if not weather_data['cod'] == 200:
         return render_template('city-not-found.html')
 
@@ -36,4 +36,8 @@ def get_weather():
 
 
 if __name__ == "__main__":
+    print("Starting server...")
     serve(app, host="0.0.0.0", port=8000)
+    print("Server is running on http://0.0.0.0:8000")
+
+
